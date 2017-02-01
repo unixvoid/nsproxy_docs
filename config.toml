@@ -53,6 +53,26 @@ canonifyurls = true
 	url    = "api/"
 	weight = 10
 
+[[menu.main]]
+	name   = "Basic Usage"
+	url    = "basic_usage/"
+	weight = 10
+
+[[menu.main]]
+	name   = "Building"
+	url    = "building/"
+	weight = 10
+
+[[menu.main]]
+	name   = "Configuration"
+	url    = "configuration/"
+	weight = 10
+
+[[menu.main]]
+	name   = "Redis Data Structures"
+	url    = "redis_data_structures/"
+	weight = 10
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
