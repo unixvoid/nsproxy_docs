@@ -59,7 +59,7 @@ Nsproxy exposes an api for easy access to data and creating DNS records.  The fo
   `dnstype` : the type of request being made: supported {a, aaaa, cname}  
   `domain`  : domain name, this will be fully qualified by nsproxy if it is not already  
   `value`   : the entry value {ip4 address for 'a', ipv6 address for 'aaaa', aname for 'aname'}  
-* **Sample Call**
+* **Sample Call**  
   ```bash
   curl -d dnstype=CNAME -d domain=bitnuke.io -d value=turbo.lb.bitnuke.io localhost:8080/dns
   ```
