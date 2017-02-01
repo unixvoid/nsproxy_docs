@@ -8,6 +8,7 @@ weight: 0
 ## Nsproxy documentation
 
 [![Build Status (Travis)](https://travis-ci.org/unixvoid/nsproxy.svg?branch=develop)](https://travis-ci.org/unixvoid/nsproxy)  
+
 Nsproxy is a DNS proxy and cluster manager written in go.  This project acts as
 a normal DNS server (in addition to the cluster managment) and allows the use of
 custom DNS entries.  Currently nsproxy fully supports A, AAAA, and CNAME
@@ -15,43 +16,36 @@ entries.
 
 ![Banner](img/banner.png)
 
-Material is very lightweight – it is built from scratch using Javascript and
-CSS that weighs less than 30kb (minified, gzipped and excluding Google Fonts
-and Analytics). Yet, it is highly customizable and degrades gracefully in older
-browsers.
 
 ## Quick start
 
-Install with `git`:
+There are 3 main ways to run nsproxy:  
 
-```sh
-git clone git@github.com:digitalcraftsman/hugo-material-docs.git themes/hugo-material-docs
-```
+1. **Docker**:  
+  we have nsproxy pre-packaged over on the [dockerhub](https://hub.docker.com/r/unixvoid/nsproxy/), go grab the latest and run: 
+  ```bash
+  docker run -d -p 8080:8080 -p 53:53 unixvoid/nsproxy
+  ```
 
-## Features
+2. **ACI/rkt**:  
+  we have public rkt images hosted on the site! check them out [here](https://cryo.unixvoid.com/bin/rkt/nsproxy/) or go give us a fetch for 64bit machines!
+  ```bash
+  rkt fetch unixvoid.com/nsproxy
+  ```
+  This image can be run with rkt or you can
+  grab our handy [service file](https://github.com/unixvoid/cryodns/blob/master/deps/cryodns.service)
 
-- Beautiful, readable and very user-friendly design based on Google's material
-  design guidelines, packed in a full responsive template with a well-defined
-  and [easily customizable color palette]({{< relref "getting-started/index.md#changing-the-color-palette" >}}), great typography, as well as a
-  beautiful search interface and footer.
+3. **From Source**:  
+  Are we not compiled for your architecture? Wanna hack on the source?  Lets bulid and deploy:  
+  ```bash
+  make dependencies
+  make run
+  ```  
 
-- Well-tested and optimized Javascript and CSS including a cross-browser
-  fixed/sticky header, a drawer that even works without Javascript using
-  the [checkbox hack](http://tutorialzine.com/2015/08/quick-tip-css-only-dropdowns-with-the-checkbox-hack/) with fallbacks, responsive tables that scroll when
-  the screen is too small and well-defined print styles.
+  If you want to build a docker use: `make docker`  
+  If you want to build an ACI use: `make aci`
 
-- Extra configuration options like a [project logo]({{< relref "getting-started/index.md#adding-a-logo" >}}), links to the authors
-  [GitHub and Twitter accounts]({{< relref "getting-started/index.md#adding-a-github-and-twitter-account" >}}) and display of the amount of stars the
-  project has on GitHub.
-
-- Web application capability on iOS – when the page is saved to the homescreen,
-  it behaves and looks like a native application.
-
-See the [getting started guide]({{< relref "getting-started/index.md" >}}) for instructions how to get
-it up and running.
 
 ## Acknowledgements
 
-Last but not least a big thank you to [Martin Donath](https://github.com/squidfunk). He created the original [Material theme](https://github.com/squidfunk/mkdocs-material) for Hugo's companion [MkDocs](http://www.mkdocs.org/). This port wouldn't be possible without him.
-
-Furthermore, thanks to [Steve Francia](https://gihub.com/spf13) for creating Hugo and the [awesome community](https://github.com/spf13/hugo/graphs/contributors) around the project.
+Big shoutout to the guys over at miekg, this project makes use of their [dns library](https://github.com/miekg/dns) for go.
