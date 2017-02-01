@@ -16,7 +16,7 @@ canonifyurls = true
 	repo_url = "https://github.com/unixvoid/nsproxy"
 
 	version = "0.2a"
-	logo = "images/logo.png"
+	logo = "img/logo.png"
 	favicon = ""
 
 	permalink = "#"
@@ -29,12 +29,12 @@ canonifyurls = true
 	highlight_css  = ""
 
 	[params.palette]
-    	primary = "red"
+    	primary = "indigo"
     	accent  = "teal"
 
     [params.font]
-    	text = "Ubuntu"
-    	code = "Ubuntu Mono"
+    	text = "Source Sans Pro"
+    	code = "Source Code Pro"
 
 
 [social]
@@ -47,6 +47,11 @@ canonifyurls = true
 	name   = "Nsproxy"
 	url    = "/"
 	weight = 0
+
+[[menu.main]]
+	name   = "API"
+	url    = "api/"
+	weight = 10
 
 [[menu.main]]
 	name   = "Getting started"

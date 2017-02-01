@@ -1,17 +1,19 @@
 ---
 date: 2016-03-08T21:07:13+01:00
-title: Material for Hugo
+title: DNS based load balancer
 type: index
 weight: 0
 ---
 
 ## Nsproxy documentation
 
-Material is a theme for [Hugo](https://gohugo.io), a fast and flexible static site generator. It is built using Google's [material design](https://www.google.com/design/spec/material-design/introduction.html)
-guidelines, fully responsive, optimized for touch and pointer devices as well
-as all sorts of screen sizes.
+[![Build Status (Travis)](https://travis-ci.org/unixvoid/nsproxy.svg?branch=develop)](https://travis-ci.org/unixvoid/nsproxy)  
+Nsproxy is a DNS proxy and cluster manager written in go.  This project acts as
+a normal DNS server (in addition to the cluster managment) and allows the use of
+custom DNS entries.  Currently nsproxy fully supports A, AAAA, and CNAME
+entries.
 
-![Material Screenshot](/images/screen.png)
+![Banner](img/banner.png)
 
 Material is very lightweight – it is built from scratch using Javascript and
 CSS that weighs less than 30kb (minified, gzipped and excluding Google Fonts
