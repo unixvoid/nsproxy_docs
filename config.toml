@@ -15,7 +15,7 @@ canonifyurls = true
 	provider = "GitHub"
 	repo_url = "https://github.com/unixvoid/nsproxy"
 
-	version = "0.2a"
+	version = "v0.0.3a"
 	logo = "img/logo.png"
 	favicon = ""
 
